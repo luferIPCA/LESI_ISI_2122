@@ -1,0 +1,26 @@
+<!--
+Expressoes regulares com javascript
+by lufer
+-->
+
+<html>
+<head>
+	<script language="JavaScript1.2">
+function isValid(){
+  var re5digit=/^\d{5}$/ //ER para 5 digitos
+  if (document.formulario.dados.value.search(re5digit)==-1) //método "search" verifica se a expressão ocorre
+      alert("Valor inválido");
+  else
+  		alert("Fixe");
+}
+</script>
+</head>
+<body>
+
+<form name="formulario">
+<input type="text" name="dados" size=15>
+<input type="button" onClick="isValid()" value="Valida">(5 digitos)
+
+</form>
+</body>
+</html>

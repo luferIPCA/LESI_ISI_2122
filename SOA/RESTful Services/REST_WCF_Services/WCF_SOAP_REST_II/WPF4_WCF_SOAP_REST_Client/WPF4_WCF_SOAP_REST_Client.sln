@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF4_WCF_SOAP_REST_Client", "WPF4_WCF_SOAP_REST_Client.csproj", "{FE09F4B3-44EE-421C-B987-6FB9DA8962C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE09F4B3-44EE-421C-B987-6FB9DA8962C9}.Debug|x86.ActiveCfg = Debug|x86
+		{FE09F4B3-44EE-421C-B987-6FB9DA8962C9}.Debug|x86.Build.0 = Debug|x86
+		{FE09F4B3-44EE-421C-B987-6FB9DA8962C9}.Release|x86.ActiveCfg = Release|x86
+		{FE09F4B3-44EE-421C-B987-6FB9DA8962C9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87AEDCE8-8FF0-4C10-8D48-ADE104F91CF1}
+	EndGlobalSection
+EndGlobal

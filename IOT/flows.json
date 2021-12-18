@@ -1,0 +1,143 @@
+[
+    {
+        "id": "43a8282353f9759b",
+        "type": "tab",
+        "label": "Teste1 - Input CSV",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5493d318b669b339",
+        "type": "inject",
+        "z": "43a8282353f9759b",
+        "name": "Starting",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Hora:",
+        "payloadType": "date",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "be111973c04bd518"
+            ]
+        ]
+    },
+    {
+        "id": "be111973c04bd518",
+        "type": "file in",
+        "z": "43a8282353f9759b",
+        "name": "Get CSV",
+        "filename": "D:\\Temp\\ISI- ESI\\ETL\\Aulas\\Ex1\\carros.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "2642737ee06f87da"
+            ]
+        ],
+        "info": "D:\\Temp\\ISI- ESI\\ETL\\Aulas\\Ex1\\carros.csv"
+    },
+    {
+        "id": "2642737ee06f87da",
+        "type": "csv",
+        "z": "43a8282353f9759b",
+        "name": "Analyse CSV",
+        "sep": ";",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "e6faec15a735a6e0"
+            ]
+        ]
+    },
+    {
+        "id": "e6faec15a735a6e0",
+        "type": "debug",
+        "z": "43a8282353f9759b",
+        "name": "Results",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "bf731b8f95321438",
+        "type": "inject",
+        "z": "43a8282353f9759b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "889c625f5d66ed03"
+            ]
+        ]
+    },
+    {
+        "id": "889c625f5d66ed03",
+        "type": "debug",
+        "z": "43a8282353f9759b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 460,
+        "wires": []
+    }
+]

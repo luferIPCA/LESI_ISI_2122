@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Carros>
+ <Carro><Vendidos> 100</Vendidos> <Tipo>Carrinha</Tipo> <Anos> 2000</Anos> <Cilindradas> 2500</Cilindradas> <Cores>Cinza</Cores> <Matriculas>FG-CF-48</Matriculas> <Marcas>BMW</Marcas> </Carro>
+ <Carro><Vendidos> 150</Vendidos> <Tipo>Passageiros</Tipo> <Anos> 1995</Anos> <Cilindradas> 1800</Cilindradas> <Cores>Vermelho</Cores> <Matriculas>AB-CD-01</Matriculas> <Marcas>Ford</Marcas> </Carro>
+ <Carro><Vendidos> 020</Vendidos> <Tipo>Carrinha</Tipo> <Anos> 2008</Anos> <Cilindradas> 2500</Cilindradas> <Cores>Cinza</Cores> <Matriculas>FG-CF-48</Matriculas> <Marcas>BMW</Marcas> </Carro>
+ <Carro><Vendidos> 123</Vendidos> <Tipo>Passageiros</Tipo> <Anos> 1995</Anos> <Cilindradas> 1800</Cilindradas> <Cores>Vermelho</Cores> <Matriculas>AB-CD-01</Matriculas> <Marcas>Ford</Marcas> </Carro>
+ <Carro><Vendidos> 023</Vendidos> <Tipo>Carrinha</Tipo> <Anos> 2000</Anos> <Cilindradas> 2500</Cilindradas> <Cores>Cinza</Cores> <Matriculas>FG-CF-48</Matriculas> <Marcas>BMW</Marcas> </Carro>
+ <Carro><Vendidos> 000</Vendidos> <Tipo>Passageiros</Tipo> <Anos> 1995</Anos> <Cilindradas> 1800</Cilindradas> <Cores>Vermelho</Cores> <Matriculas>AB-CD-01</Matriculas> <Marcas>Ford</Marcas> </Carro>
+ <Carro><Vendidos> 034</Vendidos> <Tipo>Carrinha</Tipo> <Anos> 2000</Anos> <Cilindradas> 2500</Cilindradas> <Cores>Cinza</Cores> <Matriculas>FG-CF-48</Matriculas> <Marcas>BMW</Marcas> </Carro>
+ <Carro><Vendidos> 045</Vendidos> <Tipo>Passageiros</Tipo> <Anos> 1995</Anos> <Cilindradas> 1800</Cilindradas> <Cores>Vermelho</Cores> <Matriculas>AB-CD-01</Matriculas> <Marcas>Ford</Marcas> </Carro>
+</Carros>

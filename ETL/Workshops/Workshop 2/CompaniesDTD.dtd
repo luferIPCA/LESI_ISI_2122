@@ -1,0 +1,12 @@
+<!ELEMENT Companies (Company+)>
+<!ELEMENT Company (Name+, symbol, Date,Time?,PreviousClose?,Open?,Last?,High?,Low?,Change?)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT symbol (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT Time (#PCDATA)>
+<!ELEMENT PreviousClose (#PCDATA)>
+<!ELEMENT Open (#PCDATA)>
+<!ELEMENT Last (#PCDATA)>
+<!ELEMENT High (#PCDATA)>
+<!ELEMENT Low (#PCDATA)>
+<!ELEMENT Change (#PCDATA)>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<Carros>
+<Carro><Marcas>BMW</Marcas> <Ano> 000000000002000</Ano> <Matriculas>FG-CF-48</Matriculas> <Cores>Cinza</Cores> <Cilindradas> 000000000002500</Cilindradas> <Tipo>Carrinha</Tipo> <Vendidos> 000000000000100</Vendidos></Carro>
+<Carro><Marcas>Ford</Marcas> <Ano> 000000000001995</Ano> <Matriculas>AB-CD-01</Matriculas> <Cores>Vermelho</Cores> <Cilindradas> 000000000001800</Cilindradas> <Tipo>Passageiros</Tipo> <Vendidos> 000000000000150</Vendidos></Carro>
+<Carro><Marcas>Ford</Marcas> <Ano> 000000000001995</Ano> <Matriculas>AB-CD-01</Matriculas> <Cores>Vermelho</Cores> <Cilindradas> 000000000001800</Cilindradas> <Tipo>Passageiros</Tipo> <Vendidos> 000000000000123</Vendidos></Carro>
+<Carro><Marcas>BMW</Marcas> <Ano> 000000000002000</Ano> <Matriculas>FG-CF-48</Matriculas> <Cores>Cinza</Cores> <Cilindradas> 000000000002500</Cilindradas> <Tipo>Carrinha</Tipo> <Vendidos> 000000000000023</Vendidos></Carro>
+<Carro><Marcas>Ford</Marcas> <Ano> 000000000001995</Ano> <Matriculas>AB-CD-01</Matriculas> <Cores>Vermelho</Cores> <Cilindradas> 000000000001800</Cilindradas> <Tipo>Passageiros</Tipo> <Vendidos> 000000000000000</Vendidos></Carro>
+<Carro><Marcas>BMW</Marcas> <Ano> 000000000002000</Ano> <Matriculas>FG-CF-48</Matriculas> <Cores>Cinza</Cores> <Cilindradas> 000000000002500</Cilindradas> <Tipo>Carrinha</Tipo> <Vendidos> 000000000000034</Vendidos></Carro>
+<Carro><Marcas>Ford</Marcas> <Ano> 000000000001995</Ano> <Matriculas>AB-CD-01</Matriculas> <Cores>Vermelho</Cores> <Cilindradas> 000000000001800</Cilindradas> <Tipo>Passageiros</Tipo> <Vendidos> 000000000000045</Vendidos></Carro>
+</Carros>

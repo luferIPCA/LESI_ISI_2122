@@ -1,0 +1,181 @@
+[
+    {
+        "id": "436db300e1488eeb",
+        "type": "tab",
+        "label": "Teste2 - Input CSV",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a44162ea9f0be04f",
+        "type": "inject",
+        "z": "436db300e1488eeb",
+        "name": "Starting",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Hora:",
+        "payloadType": "date",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "932aa53da725f265"
+            ]
+        ]
+    },
+    {
+        "id": "932aa53da725f265",
+        "type": "file in",
+        "z": "436db300e1488eeb",
+        "name": "Get CSV",
+        "filename": "D:\\Temp\\ISI- ESI\\ETL\\Aulas\\Ex1\\carros.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "a9fe735dab0eede1"
+            ]
+        ],
+        "info": "D:\\Temp\\ISI- ESI\\ETL\\Aulas\\Ex1\\carros.csv"
+    },
+    {
+        "id": "a9fe735dab0eede1",
+        "type": "csv",
+        "z": "436db300e1488eeb",
+        "name": "Analyse CSV",
+        "sep": ";",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "85f70fa316d34fba"
+            ]
+        ]
+    },
+    {
+        "id": "c0620ea7fc213f99",
+        "type": "debug",
+        "z": "436db300e1488eeb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "240ecda4a8ab7263",
+        "type": "inject",
+        "z": "436db300e1488eeb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "746d09208c2679fa"
+            ]
+        ]
+    },
+    {
+        "id": "e7b48d9e107c1164",
+        "type": "debug",
+        "z": "436db300e1488eeb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "85f70fa316d34fba",
+        "type": "function",
+        "z": "436db300e1488eeb",
+        "name": "Change BMW",
+        "func": "var str = payload.replace(\"BMW\",\"SKODA\");\nreturn str;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [
+                "c0620ea7fc213f99"
+            ]
+        ]
+    },
+    {
+        "id": "746d09208c2679fa",
+        "type": "function",
+        "z": "436db300e1488eeb",
+        "name": "Change BMW",
+        "func": "\n// Create a Date object from the payload\nvar date = new Date(msg.payload);\n// Change the payload to be a formatted Date string\nmsg.payload = date.toString();\n// Return the message so it can be sent on\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "e7b48d9e107c1164"
+            ]
+        ]
+    }
+]

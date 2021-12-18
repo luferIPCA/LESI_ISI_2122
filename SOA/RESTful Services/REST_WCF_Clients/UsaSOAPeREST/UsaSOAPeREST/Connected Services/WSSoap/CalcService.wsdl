@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CalcService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:12394/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:12394/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:12394/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalcREST_AddRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRest" />
+  </wsdl:message>
+  <wsdl:message name="ICalcREST_AddRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalcREST_SumSubRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumSubRest" />
+  </wsdl:message>
+  <wsdl:message name="ICalcREST_SumSubRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumSubRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalcREST_DivRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DivRest" />
+  </wsdl:message>
+  <wsdl:message name="ICalcREST_DivRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_SumSub_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumSub" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_SumSub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_Div_InputMessage">
+    <wsdl:part name="parameters" element="tns:Div" />
+  </wsdl:message>
+  <wsdl:message name="ICalcSOAP_Div_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICalcREST">
+    <wsdl:operation name="AddRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcREST/AddRest" message="tns:ICalcREST_AddRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcREST/AddRestResponse" message="tns:ICalcREST_AddRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumSubRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcREST/SumSubRest" message="tns:ICalcREST_SumSubRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcREST/SumSubRestResponse" message="tns:ICalcREST_SumSubRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DivRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcREST/DivRest" message="tns:ICalcREST_DivRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcREST/DivRestResponse" message="tns:ICalcREST_DivRest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ICalcSOAP">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcSOAP/Add" message="tns:ICalcSOAP_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcSOAP/AddResponse" message="tns:ICalcSOAP_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumSub">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcSOAP/SumSub" message="tns:ICalcSOAP_SumSub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcSOAP/SumSubResponse" message="tns:ICalcSOAP_SumSub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalcSOAP/Div" message="tns:ICalcSOAP_Div_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalcSOAP/DivResponse" message="tns:ICalcSOAP_Div_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPEndPoint" type="tns:ICalcSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/ICalcSOAP/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumSub">
+      <soap:operation soapAction="http://tempuri.org/ICalcSOAP/SumSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <soap:operation soapAction="http://tempuri.org/ICalcSOAP/Div" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalcService">
+    <wsdl:port name="SOAPEndPoint" binding="tns:SOAPEndPoint">
+      <soap:address location="http://localhost:12394/Service.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <style>
+
+        .chart div {
+            font: 10px sans-serif;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+            margin-left: 20px;
+        }
+
+        </style>
+      <title>Stock Quotes od Facebook and Alibaba</title>
+   </head>
+   <body>
+      <h1>Companies</h1>
+      <div class="chart">
+         <h2>Alibaba Group Hol</h2>
+         <div style="width: 98.73px; background-color: #160949;"> 98.73</div>
+         <div style="width: 100.12px; background-color: #2B1C67;"> 100.12</div>
+         <div style="width: 98.6px; background-color: #40317F;"> 98.6</div>
+         <div style="width: 100.22px; background-color: #5B4C96;"> 100.22</div>
+         <div style="width: 98.1356px; background-color: #8276B3;"> 98.1356</div>
+         <div style="color: red; text-align: left; font: 13px sans-serif;">Change Trend - ↓  -0.13</div>
+         <h2>Facebook</h2>
+         <div style="width: 74.11px; background-color: #160949;"> 74.11</div>
+         <div style="width: 74.98px; background-color: #2B1C67;"> 74.98</div>
+         <div style="width: 74.99px; background-color: #40317F;"> 74.99</div>
+         <div style="width: 75.7px; background-color: #5B4C96;"> 75.7</div>
+         <div style="width: 74.45px; background-color: #8276B3;"> 74.45</div>
+         <div style="color: green; text-align: left; font: 13px sans-serif;">Change Trend - ↑   0.88</div>
+      </div>
+      <p>
+         <span style="font-size: 10px; line-height: 1px">   Caption: <span style="color:#160949">♦</span> - Previous Close - Previous close can refer to the prior day's value of a stock, bond, commodity, futures or option contract, market index, or any other security</span>
+      </p>
+      <p>
+         <span style="font-size: 10px; line-height: 1px">   Caption: <span style="color:#2B1C67">♦</span> - Open - The open on a trading exchange signals the start of an official day for the exchange, and that buy and sell transactions can commence for the business day.</span>
+      </p>
+      <p>
+         <span style="font-size: 10px; line-height: 1px">   Caption: <span style="color:#40317F">♦</span> - Last -  Last-traded price and volume traded</span>
+      </p>
+      <p>
+         <span style="font-size: 10px; line-height: 1px">   Caption: <span style="color:#40317F">♦</span> - High - The highest and lowest prices that a stock has traded at during the previous year</span>
+      </p>
+      <p>
+         <span style="font-size: 10px; line-height: 1px">   Caption: <span style="color:#40317F">♦</span> - Low - The highest and lowest prices that a stock has traded at during the previous year</span>
+      </p>
+      <p/>
+      <h3>Objectivo</h3>
+      <p>O objectivo deste Workshop consiste em ter uma execução diária, em que notifique os clientes por email com as cotações das suas acções das empresas cotadas no NASDAQ.</p>
+      <h3>Tecnologias Usadas</h3>
+      <p>As tecnologias que irão ser utilizadas irão ser xml, dtd e xsl</p>
+      <h3>Descrição</h3>
+      <p>Em anexo encontra-se todos os ficheiros necessários para este workshop:</p>
+      <ul>
+         <li>load_job.kjb - Job principal que têm toda a cadeia de transformações</li>
+         <li>get_stock.ktr - Transformação que utiliza we service para saber as cotações de mercado</li>
+         <li>parseToString.ktr - Transformação que coloca todo o código html numa string para ser injectado no corpo de email</li>
+         <li>StockCompanies.xml - XML file onde se configura as empresas para obter a cotização de mercado</li>
+         <li>finalCompaniesXml.xml - XML file final onde são incluidos os dados da cotização</li>
+         <li>CompaniesDTD.dtd - DTD file de validação do xml</li>
+         <li>template.xsl - Style sheet para a criação do email</li>
+      </ul>
+      <h4>Email gerado por Pentaho Data Integration Kettle</h4>
+      <h4>Autor: Daniel Salgueiral</h4>
+   </body>
+</html>

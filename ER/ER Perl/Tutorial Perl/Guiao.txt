@@ -1,0 +1,12 @@
+Tutorial Perl: Guião
+
+1- Variáveis
+
+2- Ciclos
+
+3- Arrays
+
+4- Hash Tables
+
+5- Files
+

@@ -1,0 +1,28 @@
+
+Installation:
+---------------
+
+https://nodered.org/docs/getting-started/windows#running-on-windows
+
+1- Node.js
+https://nodejs.org/en/
+
+	- testar:
+	- node --version && npm --version
+
+2- Node-Red
+	- c:\npm install -g --unsafe-perm node-red
+
+3- Running
+	- c:\node-red
+
+4- Using
+	http://127.0.0.1:1880/
+
+-----------------
+
+
+How-to
+
+https://www.youtube.com/channel/UCQaB8NXBEPod7Ab8PPCLLAA
+https://www.youtube.com/watch?v=3AR432bguOY

@@ -1,0 +1,37 @@
+<!--
+by lufer
+Javascript
+ - Expressões Regulares
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript">
+      //var re = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;		//USA: 			tipo: (123).123.1234
+      var re = /\(?\+\d{3}\)?\s*\d{9}/;						//Portugal: 	tipo: (123).123.1234
+
+      function testInfo(phoneInput)
+      {
+        var ok = re.exec(phoneInput.value);
+        if (!ok)
+        {
+          window.alert(RegExp.input + " Número de telefone inválido!");
+        }
+        else
+        {
+          window.alert("Fixe, o seu Telef=  " + ok[0]);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>Número de Telefone com com código de área entre "()":</p>
+    <form action="">
+      <input name="phone" onchange="testInfo(this);">
+    </form>
+  </body>
+</html>

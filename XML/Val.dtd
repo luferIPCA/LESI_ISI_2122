@@ -1,0 +1,3 @@
+<!ELEMENT Product (ProductName)>
+<!ATTLIST Product ProductID CDATA #REQUIRED>
+<!ELEMENT ProductName (#PCDATA)>

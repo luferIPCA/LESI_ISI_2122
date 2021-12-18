@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Companies>
+ <Company><Name>Facebook</Name> <symbol>FB</symbol> <Date>1&#47;23&#47;2015</Date> <Time>4:00pm</Time> <PreviousClose> 7765,0</PreviousClose> <Open> 7763,0</Open> <Last> 7783,0</Last> <High> 7819,0</High> <Low> 7704,0</Low> <Change> 0,18</Change> </Company>
+ <Company><Name>Alibaba Group Hol</Name> <symbol>BABA</symbol> <Date>1&#47;23&#47;2015</Date> <Time>4:01pm</Time> <PreviousClose> 10400,0</PreviousClose> <Open> 10415,0</Open> <Last> 10311,0</Last> <High> 10520,0</High> <Low> 10302,0</Low> <Change>-89,0</Change> </Company>
+</Companies>

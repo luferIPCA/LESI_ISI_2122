@@ -1,0 +1,31 @@
+<!DOCTYPE museums [  
+<!ELEMENT museums (museum+)>
+<!ELEMENT museum (name+, city, country)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST museum id_museum CDATA #REQUIRED >
+ ]>
+ 
+<museums>
+ 	<museum>
+       <name>Museu da Musica</name> 
+       <city>Lisbon</city>
+       <country>Portugal</country> 
+   </museum>
+ 	<museum id_museum= '2'> 
+        <name>Museu do Louvre</name>
+        <city>Paris</city> 
+        <country>France</country> 
+   </museum>
+   <museum id_museum= '3'> 
+        <name>British Museum</name>
+	<city>London</city> 
+         <country>Engand</country> 
+   </museum>
+   <museum id_museum= '4'> 
+      <name>Biblioteca Luis Angel Arango</name>
+        <city>Bogota</city> 
+        <country>Colombia</country> 
+   </museum>
+</museums>

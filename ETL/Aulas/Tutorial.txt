@@ -1,0 +1,45 @@
+
+---------
+
+Tutorial Kettle
+
+1- Lidar com objetos de input e output
+
+	Ex1, Ex2
+	Converter formato in (txt, csv) em formato out (xml, txt)
+
+2 - Filtrar Rows
+
+	Ex3
+	xml -> excel
+
+3 - Testes (if)
+
+	Ex4	
+	import CSV
+	Filtering Data
+	export XML and Ziped data
+
+4 - Join Data
+
+	Ex5
+
+
+5 - Split Data
+
+	Ex6
+
+6 - Formatar input (txt)
+
+	- Add constantes
+	- Add XML column
+	- javascript
+	- XML Join
+
+
+7 - Expressões regulares
+
+	
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<carros>
+	<carro>
+		<Marca>BMW</Marca>
+		<Ano>2018</Ano>
+		<Matricula>FG-CF-48</Matricula>
+		<Cor>Cinza</Cor>
+		<Cilindrada>2500</Cilindrada>
+		<Tipo>Carrinha</Tipo>
+	</carro>
+	<carro>
+		<Marca>Ford</Marca>
+		<Ano>1995</Ano>
+		<Matricula>AB-CD-01</Matricula>
+		<Cor>Vermelho</Cor>
+		<Cilindrada>1800</Cilindrada>
+		<Tipo>passageiros</Tipo>
+	</carro>
+</carros>

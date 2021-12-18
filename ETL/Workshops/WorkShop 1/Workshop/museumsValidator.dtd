@@ -1,0 +1,10 @@
+<!ELEMENT museums (museum+)>
+<!ELEMENT museum (name+, city, country,Temperature?,Visibility?,Wind?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT Temperature (#PCDATA)>
+<!ELEMENT Visibility (#PCDATA)>
+<!ELEMENT Wind (#PCDATA)>
+<!ATTLIST museum Id_museum CDATA #REQUIRED >
+

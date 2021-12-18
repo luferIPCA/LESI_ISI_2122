@@ -1,0 +1,10 @@
+<stock>
+	<company id_company='1'>
+		<name>Facebook</name>
+		<symbol>FB</symbol>
+	</company>
+	<company id_company='2'>
+		<name>Alibaba</name>
+		<symbol>BABA</symbol>
+	</company>
+</stock>

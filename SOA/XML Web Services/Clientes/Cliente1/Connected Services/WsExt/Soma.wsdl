@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ipca.pt/isi/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.ipca.pt/isi/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviços Web para ISI - 2020</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ipca.pt/isi/">
+      <s:element name="SaySomething">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaySomethingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaySomethingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Somar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SomarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SomarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiplica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplicaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SomaEMultiplica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SomaEMultiplicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SomaEMultiplicaResult" type="tns:SomaProd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SomaProd">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="P" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaySomethingSoapIn">
+    <wsdl:part name="parameters" element="tns:SaySomething" />
+  </wsdl:message>
+  <wsdl:message name="SaySomethingSoapOut">
+    <wsdl:part name="parameters" element="tns:SaySomethingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SomarSoapIn">
+    <wsdl:part name="parameters" element="tns:Somar" />
+  </wsdl:message>
+  <wsdl:message name="SomarSoapOut">
+    <wsdl:part name="parameters" element="tns:SomarResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicaSoapIn">
+    <wsdl:part name="parameters" element="tns:Multiplica" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicaSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SomaEMultiplicaSoapIn">
+    <wsdl:part name="parameters" element="tns:SomaEMultiplica" />
+  </wsdl:message>
+  <wsdl:message name="SomaEMultiplicaSoapOut">
+    <wsdl:part name="parameters" element="tns:SomaEMultiplicaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SomaSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devolve string</wsdl:documentation>
+      <wsdl:input name="SaySomething" message="tns:SaySomethingSoapIn" />
+      <wsdl:output name="SaySomething" message="tns:SaySomethingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Somar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a soma de dois valores inteiros</wsdl:documentation>
+      <wsdl:input message="tns:SomarSoapIn" />
+      <wsdl:output message="tns:SomarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiplica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Multiplca dois números</wsdl:documentation>
+      <wsdl:input message="tns:MultiplicaSoapIn" />
+      <wsdl:output message="tns:MultiplicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SomaEMultiplica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula duas operações</wsdl:documentation>
+      <wsdl:input message="tns:SomaEMultiplicaSoapIn" />
+      <wsdl:output message="tns:SomaEMultiplicaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SomaSoap" type="tns:SomaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://www.ipca.pt/isi/SaySomething" style="document" />
+      <wsdl:input name="SaySomething">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaySomething">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Somar">
+      <soap:operation soapAction="http://www.ipca.pt/isi/Somar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplica">
+      <soap:operation soapAction="http://www.ipca.pt/isi/Multiplica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SomaEMultiplica">
+      <soap:operation soapAction="http://www.ipca.pt/isi/SomaEMultiplica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SomaSoap12" type="tns:SomaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://www.ipca.pt/isi/SaySomething" style="document" />
+      <wsdl:input name="SaySomething">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaySomething">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Somar">
+      <soap12:operation soapAction="http://www.ipca.pt/isi/Somar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplica">
+      <soap12:operation soapAction="http://www.ipca.pt/isi/Multiplica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SomaEMultiplica">
+      <soap12:operation soapAction="http://www.ipca.pt/isi/SomaEMultiplica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Soma">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviços Web para ISI - 2020</wsdl:documentation>
+    <wsdl:port name="SomaSoap" binding="tns:SomaSoap">
+      <soap:address location="https://localhost:44390/Services/Soma.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SomaSoap12" binding="tns:SomaSoap12">
+      <soap12:address location="https://localhost:44390/Services/Soma.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

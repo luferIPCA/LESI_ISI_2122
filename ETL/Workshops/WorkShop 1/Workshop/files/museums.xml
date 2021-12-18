@@ -1,0 +1,22 @@
+<museums>
+ 	<museum id_museum= '1'>
+       <name>Museu da Musica</name> 
+       <city>Lisboa</city>
+       <country>Portugal</country> 
+   </museum>
+ 	<museum id_museum= '2'> 
+        <name>Museu do Louvre</name>
+        <city>Paris-Orly</city> 
+        <country>France</country> 
+   </museum>
+   <museum id_museum= '3'> 
+        <name>British Museum</name>
+	<city>Newcastle</city> 
+         <country>United Kingdom</country> 
+   </museum>
+   <museum id_museum= '4'> 
+      <name>Biblioteca Luis Angel Arango</name>
+        <city>Bogota</city> 
+        <country>Colombia</country> 
+   </museum>
+</museums>

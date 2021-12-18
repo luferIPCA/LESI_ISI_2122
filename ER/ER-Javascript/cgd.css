@@ -1,0 +1,80 @@
+/*
+ * by lufer
+ * Para Teste
+ */
+
+body { 
+	font-family: calibri; 	
+	color:navy;
+	margin:0;
+	padding:0;
+	height:100%; 	/* tamanho total da area do browser */	
+}
+
+
+a:link, a:visited { color: navy; }
+
+
+input.btn {
+	/*color: navy;	*/
+	color: orange;
+	border: 1px solid;
+	font-family: calibri;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: inherit;
+	margin: 1px;
+	background: white;
+	width: 35px;
+}
+input.btn1{
+	/*color: navy;*/
+	color:orange;
+	border: 1px solid;
+	font-family: calibri;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: inherit;
+	margin: 1px;
+	background: white;
+	width:53px;
+}
+
+input.btn:focus {
+	 color:white;
+	 background: white;
+	 //background-color: lightyellow;
+	 background-color: orange;
+}
+
+#campos{
+	font-family:calibri;
+	font-size:12px;
+	position:relative;
+	left:5px;
+}
+
+div#teclado{
+	border: 1px solid;
+	width: 190px;
+	border-color: orange;
+	position:relative;
+ 	top:20px;
+ 	left:5px;
+}
+
+div#base{
+   text-align: center;
+}
+
+div#topo{
+   text-align: center;
+}
+
+
+h2, h3 {
+	font-family: calibri;
+	position:relative;
+	left:5px;
+}
+

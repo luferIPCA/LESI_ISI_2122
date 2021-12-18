@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Level1>
+ <Level2>
+   <Props>
+    <ObjectID>AAAAA</ObjectID>
+    <SAPIDENT>31-8200</SAPIDENT>
+    <Quantity>10</Quantity>
+    <Merkmalname>TX_B</Merkmalname>
+    <Merkmalswert>600</Merkmalswert>
+   </Props>
+   <Props>
+    <ObjectID>BBBBB</ObjectID>
+    <SAPIDENT>31-8200</SAPIDENT>
+    <Quantity>15</Quantity>
+    <Merkmalname>TX_B</Merkmalname>
+    <Merkmalswert>700</Merkmalswert>
+   </Props>
+      <Props>
+    <ObjectID>CCCCCC</ObjectID>
+    <SAPIDENT>31-8200</SAPIDENT>
+    <Quantity>30</Quantity>
+    <Merkmalname>TX_B</Merkmalname>
+    <Merkmalswert>100</Merkmalswert>
+   </Props>
+ </Level2>
+</Level1>

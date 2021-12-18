@@ -1,0 +1,129 @@
+<!--
+by lufer
+Teste Modelo
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+<title>CGD</title>
+<link rel="stylesheet" type="text/css" href="cgd.css"/>
+<script type="text/javascript">
+	<!--
+	var obj=null;
+	var limite=0;
+	
+	
+	//evita que se escreva directament nas textboxes
+	function Desable(){
+		document.getElementById("valor").disabled=true;
+		document.getElementById("cod").disabled=true;
+	}
+		
+	
+	function Passwd(){
+		limite=5;
+		document.getElementById("cod").disabled=false;
+		document.getElementById("cod").value="";
+		obj = document.getElementById("cod");
+		document.getElementById("cod").focus();
+		document.getElementById("cod").disabled=true;
+	}
+	
+	function Contrato(){
+		limite=5;
+		document.getElementById("valor").disabled=false;
+		document.getElementById("valor").value="";
+		obj = document.getElementById("valor");
+		document.getElementById("valor").focus();
+		document.getElementById("valor").disabled=true;
+	}
+	
+	function Desenha(x,y)
+	{
+		var numeros="";
+		var butoes="";
+		var r=Math.floor(Math.random()*9)		
+		for(i=x; i<=y;i++){
+			numeros+="<input class='btn' type='button' value='"+r+"' onclick='Mostra(this)'/>";
+			if ((i%4)==0) numeros+="<br/>";
+			r++; if (r>9) r=0;
+		}
+		document.getElementById("topo").innerHTML=numeros;
+		
+		butoes+="<input class='btn1' type='button' value='Limpa' onclick='Limpa()'/>";
+		butoes+="<input class='btn1' type='button' value='Contrato' onclick='Contrato()'/>";
+		butoes+="<input class='btn1' type='button' value='Passwd' onclick='Passwd()'/>";
+		butoes+="<input class='btn1' type='button' value='Entrar' onclick='Ok()'/>";
+		document.getElementById("base").innerHTML=butoes;				
+	}
+	
+	function Mostra(o)
+	{		
+		if (!obj) {
+			obj = document.getElementById("valor");		
+			limite=5;
+		}
+		if (obj.value.length<limite){
+			obj.value+=o.value;
+			if (obj.value.length==limite) 
+			{
+				document.getElementById("cod").disabled=false;
+				document.getElementById("cod").focus();
+				obj=document.getElementById("cod");
+				limite=5;
+				document.getElementById("cod").disabled=true;
+			}
+	  }
+	}
+	
+	function Limpa()
+	{		
+		document.getElementById("valor").value="";		
+		document.getElementById("cod").value="";		
+		document.getElementById("valor").focus();
+		obj = document.getElementById("valor");	
+	}	
+	
+	function Ok(){
+	//alert(document.getElementById("valor").value.length);
+	//alert(document.getElementById("cod").value.length);
+		if ((document.getElementById("valor").value.length==5) && (document.getElementById("cod").value.length==5))
+			alert("Vou entrar");
+	}
+	</script>
+	
+<script type="text/javascript">
+document.onkeyup = KeyCheck;       
+function KeyCheck(e)
+	{		
+		var KeyID = (window.event) ? event.keyCode : e.keyCode;
+		if (KeyID!=116) 				//F5
+			alert("Utilize o teclado virtual");
+		return;
+	}
+</script>
+</head>
+<body >
+
+
+<h2>Home Banking</h2>
+<h3>(Teste de PW - by lufer)</h3>
+
+<form id="campos" method="POST" action="trata.php" >		
+				Contrato: <input class="btn" id="valor" type="text"/>
+				Passwd: <input class="btn" id="cod" type="password"/>
+		</p>				
+</form>
+<div id="teclado">
+	<div id="topo"></div>
+	<div id="base"></div>
+</div>
+<script type="text/javascript">
+		Desable();
+		Desenha(1,10);
+</script>
+
+</body>
+</html>

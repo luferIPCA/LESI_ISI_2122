@@ -1,0 +1,4 @@
+
+Exemplo de Kettle
+
+http://www.joyofdata.de/blog/batch-downloading-files-with-pentaho-kettle/

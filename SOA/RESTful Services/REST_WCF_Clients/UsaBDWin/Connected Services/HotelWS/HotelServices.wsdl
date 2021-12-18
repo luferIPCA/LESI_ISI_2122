@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HotelServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6418/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6418/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6418/Service.svc?xsd=xsd2" namespace="http://www.ipca.pt/isi" />
+      <xsd:import schemaLocation="http://localhost:6418/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetHotelsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelsList" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelsListJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelsListJson" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelsListJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelsListJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelById" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelByIDII_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelByIDII" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHotelByIDII_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHotelByIDIIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHotel" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddOneHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOneHotel" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddOneHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOneHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHotel" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHotel" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Auth_InputMessage">
+    <wsdl:part name="parameters" element="tns:Auth" />
+  </wsdl:message>
+  <wsdl:message name="IService_Auth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetHotelsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetHotelsList" message="tns:IService_GetHotelsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetHotelsListResponse" message="tns:IService_GetHotelsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHotelsListJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetHotelsListJson" message="tns:IService_GetHotelsListJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetHotelsListJsonResponse" message="tns:IService_GetHotelsListJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHotelById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetHotelById" message="tns:IService_GetHotelById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetHotelByIdResponse" message="tns:IService_GetHotelById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHotelByIDII">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetHotelByIDII" message="tns:IService_GetHotelByIDII_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetHotelByIDIIResponse" message="tns:IService_GetHotelByIDII_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddHotel" message="tns:IService_AddHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddHotelResponse" message="tns:IService_AddHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOneHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddOneHotel" message="tns:IService_AddOneHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddOneHotelResponse" message="tns:IService_AddOneHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateHotel" message="tns:IService_UpdateHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateHotelResponse" message="tns:IService_UpdateHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteHotel" message="tns:IService_DeleteHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteHotelResponse" message="tns:IService_DeleteHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Auth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Auth" message="tns:IService_Auth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AuthResponse" message="tns:IService_Auth_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="HotelServices" />
+</wsdl:definitions>

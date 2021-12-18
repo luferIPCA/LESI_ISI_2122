@@ -1,0 +1,14 @@
+
+XPath - JSON
+---------------------------------------
+
+https://goessner.net/articles/JsonPath/
+
+https://jsonpath.com/
+
+
+
+SQL Joins
+------------
+
+https://www.w3schools.com/sql/sql_join_full.asp
